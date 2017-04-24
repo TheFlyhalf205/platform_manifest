@@ -4,7 +4,7 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com"
-           revision="refs/tags/android-6.0.1_r78" />
+           revision="refs/tags/android-6.0.1_r79" />
 
   <remote  name="github"
                  fetch="https://github.com" />
@@ -40,33 +40,33 @@
 	   sync-f="true" />
 
 <!-- BEGIN RR -->
-  <project path="build" name="android_build" groups="pdk" remote="rr" >
+  <project path="build" name="TheFlyhalf205/android_build" groups="pdk" revision="marshmallow" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="android" name="platform_manifest" remote="rr"/>
   <project path="external/android-visualizer" name="android_external_android-visualizer" remote="rr"/>
   <project path="external/DUtils" name="external_DUtils" remote="rr" />
   <project path="external/sepolicy" name="android_external_sepolicy" groups="pdk" remote="rr" />
-  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="rr" />
-  <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="rr" />
+  <project path="frameworks/av" name="TheFlyhalf205/frameworks_av" groups="pdk" revision="marshmallow" />
+  <project path="frameworks/base" name="TheFlyhalf205/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" revision="marshmallow" />
   <project path="frameworks/opt/cards" name="frameworks_opt_cards" remote="rr" />
   <project path="packages/apps/DUI" name="packages_apps_DUI" remote="rr" />
   <project path="packages/apps/CMFileManager" name="packages_apps_CMFileManager" remote="rr" />
   <project path="packages/apps/InCallUI" name="android_packages_apps_InCallUI" remote="hs"  />
   <project path="packages/apps/LockClock" name="android_packages_apps_LockClock" remote="hs" />
-  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="hs" />
+  <project path="packages/apps/Messaging" name="TheFlyhalf205/android_packages_apps_Messaging" revision="marshmallow" />
   <project path="packages/apps/OmniSwitch" name="android_packages_apps_OmniSwitch" remote="rr" />
   <project path="packages/apps/ResurrectionOTA" name="packages_apps_ResurrectionOTA" remote="rr" />
   <project path="packages/apps/ResurrectionStats" name="packages_apps_ResurrectionStats" remote="rr" />
   <project path="packages/apps/Settings" name="Resurrection_packages_apps_Settings" groups="pdk-fs" remote="rr"/>
   <project path="packages/apps/SetupWizard" name="android_packages_apps_SetupWizard" remote="rr" />
   <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="hs" />
-  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="hs" />
+  <project path="packages/services/Telephony" name="TheFlyhalf205/android_packages_services_Telephony" revision="marshmallow" />
   <project path="system/core" name="system_core" groups="pdk" remote="rr" />
   <project path="vendor/cm" name="android_vendor_resurrection" remote="rr" />
   <project path="vendor/cmsdk" name="cm_platform_sdk" remote="rr" />
   <project path="packages/services/ThemeManagerService" name="android_packages_services_ThemeManagerService" remote="hs" />
-  <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller" remote="hs" />
+  <project path="packages/apps/PackageInstaller" name="TheFlyhalf205/android_packages_apps_PackageInstaller" revision="marshmallow" />
 <!-- END RR -->
 	
 <!-- BEGIN LINEAGEOS -->
@@ -113,6 +113,7 @@
   <project path="external/f2fs-tools" name="LineageOS/android_external_f2fs-tools" groups="pdk" />
   <project path="external/ffmpeg" name="LineageOS/android_external_ffmpeg" />
   <project path="external/flac" name="LineageOS/android_external_flac" groups="pdk" />
+  <project path="external/freetype" name="LineageOS/android_external_freetype" groups="pdk" />
   <project path="external/fsck_msdos" name="LineageOS/android_external_fsck_msdos" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/fuse" name="LineageOS/android_external_fuse" />
   <project path="external/gello-build" name="LineageOS/android_external_gello_build" />
@@ -131,11 +132,14 @@
   <project path="external/koush/AndroidAsync" name="LineageOS/AndroidAsync" />
   <project path="external/koush/ion" name="LineageOS/ion" />
   <project path="external/libavc" name="LineageOS/android_external_libavc" groups="pdk" />
+  <project path="external/libhevc" name="LineageOS/android_external_libhevc" groups="pdk-fs" />
+  <project path="external/libmpeg2" name="LineageOS/android_external_libmpeg2" groups="pdk" />
   <project path="external/libncurses" name="LineageOS/android_external_libncurses" />
   <project path="external/libnetfilter_conntrack" name="LineageOS/android_external_libnetfilter_conntrack" />
   <project path="external/libnfc-nci" name="LineageOS/android_external_libnfc-nci" groups="pdk" />
   <project path="external/libnfc-nxp" name="LineageOS/android_external_libnfc-nxp" groups="pdk" />
   <project path="external/libnfnetlink" name="LineageOS/android_external_libnfnetlink" />
+  <project path="external/libnl" name="LineageOS/android_external_libnl" groups="pdk"  />
   <project path="external/libphonenumbergoogle" name="LineageOS/android_external_libphonenumbergoogle" />
   <project path="external/libselinux" name="LineageOS/android_external_libselinux" groups="pdk" />
   <project path="external/libtar" name="LineageOS/android_external_libtar" />
@@ -381,7 +385,6 @@
   <project path="external/fdlibm" name="platform/external/fdlibm" groups="pdk" remote="aosp" />
   <project path="external/fio" name="platform/external/fio" groups="pdk-fs" remote="aosp" />
   <project path="external/fonttools" name="platform/external/fonttools" groups="pdk-fs" remote="aosp" />
-  <project path="external/freetype" name="platform/external/freetype" groups="pdk" remote="aosp" />
   <project path="external/giflib" name="platform/external/giflib" groups="pdk,qcom_msm8x26" remote="aosp" />
   <project path="external/glide" name="platform/external/glide" groups="pdk-fs" remote="aosp" />
   <project path="external/google-breakpad" name="platform/external/google-breakpad" groups="dragon" remote="aosp" />
@@ -418,11 +421,8 @@
   <project path="external/libedit" name="platform/external/libedit" groups="pdk-fs" remote="aosp" />
   <project path="external/libexif" name="platform/external/libexif" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="external/libgsm" name="platform/external/libgsm" groups="pdk" remote="aosp" />
-  <project path="external/libhevc" name="platform/external/libhevc" groups="pdk-fs" remote="aosp" />
   <project path="external/liblzf" name="platform/external/liblzf" groups="pdk" remote="aosp" />
-  <project path="external/libmpeg2" name="platform/external/libmpeg2" groups="pdk" remote="aosp" />
   <project path="external/libmtp" name="platform/external/libmtp" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
-  <project path="external/libnl" name="platform/external/libnl" groups="pdk" remote="aosp" />
   <project path="external/libogg" name="platform/external/libogg" groups="pdk" remote="aosp" />
   <project path="external/libopus" name="platform/external/libopus" groups="pdk" remote="aosp" />
   <project path="external/libpcap" name="platform/external/libpcap" groups="pdk,pdk-cw-fs,pdk-fs" remote="aosp" />
